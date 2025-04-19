@@ -26,14 +26,14 @@ uart:
   stop_bits: 1
 
 external_components:
-  - source: github://jnicolson/esphome-twc-controller
+  - source: github://Blackwolfn/esphome-twc-controller
     components: [twc-controller]
 
 twc-controller:
   id: twc
   uart_id: twc_uart
   min_current: 6
-  max_current: 32
+  max_current: 16
   set_current: 6
   twc_id: 0xAB32
   flow_control_pin: 18
