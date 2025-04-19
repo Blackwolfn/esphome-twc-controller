@@ -258,7 +258,7 @@ namespace esphome {
         presence.command = presence2 ? htons(PRIMARY_PRESENCE2) : htons(PRIMARY_PRESENCE);
         presence.twcid = twcid_;
         presence_payload->sign =  sign_;
-        presence_payload->max_allowable_current = 0x0640 // 0xC80 > 0x640 == 32A > 16A // TODO: Repalce this with something not hard coded.
+        presence_payload->max_allowable_current = 0x0640; // 0xC80 > 0x640 == 32A > 16A // TODO: Repalce this with something not hard coded.
         for (uint8_t i = 0; i <= 7; i++) {
             presence_payload->padding[i] = 0x00;
         }
